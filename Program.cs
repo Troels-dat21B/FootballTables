@@ -14,10 +14,10 @@ class FileReader
 
                 foreach (var value in values)
                 {
-                    Console.WriteLine(value);
+                    //Console.WriteLine(value);
                 }
-                Console.WriteLine();
+                //Console.WriteLine();
             }
-        }
+        }        
     }
 }
