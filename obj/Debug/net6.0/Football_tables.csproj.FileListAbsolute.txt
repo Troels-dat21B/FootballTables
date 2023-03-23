@@ -1,15 +1,15 @@
-C:\Users\troel\Skrivebord\C# projects\FootballTables\FootballTables\bin\Debug\net6.0\Football_tables.exe
-C:\Users\troel\Skrivebord\C# projects\FootballTables\FootballTables\bin\Debug\net6.0\Football_tables.deps.json
-C:\Users\troel\Skrivebord\C# projects\FootballTables\FootballTables\bin\Debug\net6.0\Football_tables.runtimeconfig.json
-C:\Users\troel\Skrivebord\C# projects\FootballTables\FootballTables\bin\Debug\net6.0\Football_tables.dll
-C:\Users\troel\Skrivebord\C# projects\FootballTables\FootballTables\bin\Debug\net6.0\Football_tables.pdb
-C:\Users\troel\Skrivebord\C# projects\FootballTables\FootballTables\obj\Debug\net6.0\Football_tables.csproj.AssemblyReference.cache
-C:\Users\troel\Skrivebord\C# projects\FootballTables\FootballTables\obj\Debug\net6.0\Football_tables.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\troel\Skrivebord\C# projects\FootballTables\FootballTables\obj\Debug\net6.0\Football_tables.AssemblyInfoInputs.cache
-C:\Users\troel\Skrivebord\C# projects\FootballTables\FootballTables\obj\Debug\net6.0\Football_tables.AssemblyInfo.cs
-C:\Users\troel\Skrivebord\C# projects\FootballTables\FootballTables\obj\Debug\net6.0\Football_tables.csproj.CoreCompileInputs.cache
-C:\Users\troel\Skrivebord\C# projects\FootballTables\FootballTables\obj\Debug\net6.0\Football_tables.dll
-C:\Users\troel\Skrivebord\C# projects\FootballTables\FootballTables\obj\Debug\net6.0\refint\Football_tables.dll
-C:\Users\troel\Skrivebord\C# projects\FootballTables\FootballTables\obj\Debug\net6.0\Football_tables.pdb
-C:\Users\troel\Skrivebord\C# projects\FootballTables\FootballTables\obj\Debug\net6.0\Football_tables.genruntimeconfig.cache
-C:\Users\troel\Skrivebord\C# projects\FootballTables\FootballTables\obj\Debug\net6.0\ref\Football_tables.dll
+C:\Program Files (x86)\KEA\Kea projekter\C\FootballTables\bin\Debug\net6.0\Football_tables.exe
+C:\Program Files (x86)\KEA\Kea projekter\C\FootballTables\bin\Debug\net6.0\Football_tables.deps.json
+C:\Program Files (x86)\KEA\Kea projekter\C\FootballTables\bin\Debug\net6.0\Football_tables.runtimeconfig.json
+C:\Program Files (x86)\KEA\Kea projekter\C\FootballTables\bin\Debug\net6.0\Football_tables.dll
+C:\Program Files (x86)\KEA\Kea projekter\C\FootballTables\bin\Debug\net6.0\Football_tables.pdb
+C:\Program Files (x86)\KEA\Kea projekter\C\FootballTables\obj\Debug\net6.0\Football_tables.csproj.AssemblyReference.cache
+C:\Program Files (x86)\KEA\Kea projekter\C\FootballTables\obj\Debug\net6.0\Football_tables.GeneratedMSBuildEditorConfig.editorconfig
+C:\Program Files (x86)\KEA\Kea projekter\C\FootballTables\obj\Debug\net6.0\Football_tables.AssemblyInfoInputs.cache
+C:\Program Files (x86)\KEA\Kea projekter\C\FootballTables\obj\Debug\net6.0\Football_tables.AssemblyInfo.cs
+C:\Program Files (x86)\KEA\Kea projekter\C\FootballTables\obj\Debug\net6.0\Football_tables.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\KEA\Kea projekter\C\FootballTables\obj\Debug\net6.0\Football_tables.dll
+C:\Program Files (x86)\KEA\Kea projekter\C\FootballTables\obj\Debug\net6.0\refint\Football_tables.dll
+C:\Program Files (x86)\KEA\Kea projekter\C\FootballTables\obj\Debug\net6.0\Football_tables.pdb
+C:\Program Files (x86)\KEA\Kea projekter\C\FootballTables\obj\Debug\net6.0\Football_tables.genruntimeconfig.cache
+C:\Program Files (x86)\KEA\Kea projekter\C\FootballTables\obj\Debug\net6.0\ref\Football_tables.dll
