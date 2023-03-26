@@ -1,15 +1,30 @@
-C:\Users\troel\Skrivebord\C# projects\FootballTables\FootballTables\bin\Debug\net6.0\Football_tables.exe
-C:\Users\troel\Skrivebord\C# projects\FootballTables\FootballTables\bin\Debug\net6.0\Football_tables.deps.json
-C:\Users\troel\Skrivebord\C# projects\FootballTables\FootballTables\bin\Debug\net6.0\Football_tables.runtimeconfig.json
-C:\Users\troel\Skrivebord\C# projects\FootballTables\FootballTables\bin\Debug\net6.0\Football_tables.dll
-C:\Users\troel\Skrivebord\C# projects\FootballTables\FootballTables\bin\Debug\net6.0\Football_tables.pdb
-C:\Users\troel\Skrivebord\C# projects\FootballTables\FootballTables\obj\Debug\net6.0\Football_tables.csproj.AssemblyReference.cache
-C:\Users\troel\Skrivebord\C# projects\FootballTables\FootballTables\obj\Debug\net6.0\Football_tables.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\troel\Skrivebord\C# projects\FootballTables\FootballTables\obj\Debug\net6.0\Football_tables.AssemblyInfoInputs.cache
-C:\Users\troel\Skrivebord\C# projects\FootballTables\FootballTables\obj\Debug\net6.0\Football_tables.AssemblyInfo.cs
-C:\Users\troel\Skrivebord\C# projects\FootballTables\FootballTables\obj\Debug\net6.0\Football_tables.csproj.CoreCompileInputs.cache
-C:\Users\troel\Skrivebord\C# projects\FootballTables\FootballTables\obj\Debug\net6.0\Football_tables.dll
-C:\Users\troel\Skrivebord\C# projects\FootballTables\FootballTables\obj\Debug\net6.0\refint\Football_tables.dll
-C:\Users\troel\Skrivebord\C# projects\FootballTables\FootballTables\obj\Debug\net6.0\Football_tables.pdb
-C:\Users\troel\Skrivebord\C# projects\FootballTables\FootballTables\obj\Debug\net6.0\Football_tables.genruntimeconfig.cache
-C:\Users\troel\Skrivebord\C# projects\FootballTables\FootballTables\obj\Debug\net6.0\ref\Football_tables.dll
+C:/Users/troel/Skrivebord/C# projects/FootballTables/FootballTables/bin/Debug/net6.0/Football_tables.exe
+C:/Users/troel/Skrivebord/C# projects/FootballTables/FootballTables/bin/Debug/net6.0/Football_tables.deps.json
+C:/Users/troel/Skrivebord/C# projects/FootballTables/FootballTables/bin/Debug/net6.0/Football_tables.runtimeconfig.json
+C:/Users/troel/Skrivebord/C# projects/FootballTables/FootballTables/bin/Debug/net6.0/Football_tables.dll
+C:/Users/troel/Skrivebord/C# projects/FootballTables/FootballTables/bin/Debug/net6.0/Football_tables.pdb
+C:/Users/troel/Skrivebord/C# projects/FootballTables/FootballTables/obj/Debug/net6.0/Football_tables.csproj.AssemblyReference.cache
+C:/Users/troel/Skrivebord/C# projects/FootballTables/FootballTables/obj/Debug/net6.0/Football_tables.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/troel/Skrivebord/C# projects/FootballTables/FootballTables/obj/Debug/net6.0/Football_tables.AssemblyInfoInputs.cache
+C:/Users/troel/Skrivebord/C# projects/FootballTables/FootballTables/obj/Debug/net6.0/Football_tables.AssemblyInfo.cs
+C:/Users/troel/Skrivebord/C# projects/FootballTables/FootballTables/obj/Debug/net6.0/Football_tables.csproj.CoreCompileInputs.cache
+C:/Users/troel/Skrivebord/C# projects/FootballTables/FootballTables/obj/Debug/net6.0/Football_tables.dll
+C:/Users/troel/Skrivebord/C# projects/FootballTables/FootballTables/obj/Debug/net6.0/refint/Football_tables.dll
+C:/Users/troel/Skrivebord/C# projects/FootballTables/FootballTables/obj/Debug/net6.0/Football_tables.pdb
+C:/Users/troel/Skrivebord/C# projects/FootballTables/FootballTables/obj/Debug/net6.0/Football_tables.genruntimeconfig.cache
+C:/Users/troel/Skrivebord/C# projects/FootballTables/FootballTables/obj/Debug/net6.0/ref/Football_tables.dll
+/home/rugaard/Documents/Projects/VisualStudioCode/c#_exercises/FootballTables/bin/Debug/net6.0/Football_tables
+/home/rugaard/Documents/Projects/VisualStudioCode/c#_exercises/FootballTables/bin/Debug/net6.0/Football_tables.deps.json
+/home/rugaard/Documents/Projects/VisualStudioCode/c#_exercises/FootballTables/bin/Debug/net6.0/Football_tables.runtimeconfig.json
+/home/rugaard/Documents/Projects/VisualStudioCode/c#_exercises/FootballTables/bin/Debug/net6.0/Football_tables.dll
+/home/rugaard/Documents/Projects/VisualStudioCode/c#_exercises/FootballTables/bin/Debug/net6.0/ref/Football_tables.dll
+/home/rugaard/Documents/Projects/VisualStudioCode/c#_exercises/FootballTables/bin/Debug/net6.0/Football_tables.pdb
+/home/rugaard/Documents/Projects/VisualStudioCode/c#_exercises/FootballTables/obj/Debug/net6.0/Football_tables.csproj.AssemblyReference.cache
+/home/rugaard/Documents/Projects/VisualStudioCode/c#_exercises/FootballTables/obj/Debug/net6.0/Football_tables.GeneratedMSBuildEditorConfig.editorconfig
+/home/rugaard/Documents/Projects/VisualStudioCode/c#_exercises/FootballTables/obj/Debug/net6.0/Football_tables.AssemblyInfoInputs.cache
+/home/rugaard/Documents/Projects/VisualStudioCode/c#_exercises/FootballTables/obj/Debug/net6.0/Football_tables.AssemblyInfo.cs
+/home/rugaard/Documents/Projects/VisualStudioCode/c#_exercises/FootballTables/obj/Debug/net6.0/Football_tables.csproj.CoreCompileInputs.cache
+/home/rugaard/Documents/Projects/VisualStudioCode/c#_exercises/FootballTables/obj/Debug/net6.0/Football_tables.dll
+/home/rugaard/Documents/Projects/VisualStudioCode/c#_exercises/FootballTables/obj/Debug/net6.0/ref/Football_tables.dll
+/home/rugaard/Documents/Projects/VisualStudioCode/c#_exercises/FootballTables/obj/Debug/net6.0/Football_tables.pdb
+/home/rugaard/Documents/Projects/VisualStudioCode/c#_exercises/FootballTables/obj/Debug/net6.0/Football_tables.genruntimeconfig.cache
