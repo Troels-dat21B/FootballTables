@@ -1,3 +1,4 @@
+
 using System;
 using System.IO;
 using System.Collections.Generic;
@@ -28,7 +29,5 @@ public class Game{
     public Tuple<string, string, int, int> roundInfo(Game g) {
         return new Tuple<string, string, int, int>(g.HomeTeam, g.AwayTeam, g.HomeTeamGoals, g.AwayTeamGoals);
     }
-
-
 
 }

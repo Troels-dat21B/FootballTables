@@ -29,6 +29,6 @@ class FileReader {
         foreach (Game g in gameRounds) {
 
             Console.WriteLine(g.roundInfo(g));
-        } 
+        }
     }
 }
