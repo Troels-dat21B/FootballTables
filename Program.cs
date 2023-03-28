@@ -1,46 +1,55 @@
 ﻿using System;
 using System.IO;
-using System.Collections.Generic;
 using System.Linq;
 using System.Globalization;
+using CsvHelper;
 namespace Game;
 
 class FileReader {
     static void Main() {
 
-        List<Game> gameRounds = new List<Game>();
-        var i = 0;
+        csvAllRoundsReader();
+    }
+
+    public static List<Game> csvAllRoundsReader() {
+
+        List<Game> allGameRounds = new List<Game>();
         foreach (string file in Directory.EnumerateFiles("./csv filer/Rounds", "*.csv")) {
 
             using (StreamReader reader = new StreamReader(file)) {
+
                 while (!reader.EndOfStream) {
-                    i += 1;
-                    
-                    var line = reader.ReadLine();
-                    Console.WriteLine(line);
-                    Console.WriteLine(i);
-                    string[] values = line.Split(',');
+                
+                var line = reader.ReadLine();
+                string[] values = line.Split(',');
 
-                    Game tuple = new Game(values[0], values[1], int.Parse(values[2]), int.Parse(values[3]));
-                    gameRounds.Add(tuple);
-                    
-                }
+                Game tuple = new Game(values[0], values[1], int.Parse(values[2]), int.Parse(values[3]));
+                allGameRounds.Add(tuple);
+                
             }
-        }
-
-        foreach (Game g in gameRounds) {
-
-            Console.WriteLine(g.roundInfo(g));
         }
     }
 
-    public static void Table() {
-        Console.WriteLine("Position  Club                       M  W  D  L  GF  GA  GD  Points  Streak");
-        Console.WriteLine("---------------------------------------------------------------------------");
+    return allGameRounds;
 
-        foreach(var team in teams){
-        Console.WriteLine("{position} {club} {match} {wins} {draws} {losses} {gf} {ga} {gd} {points} {streak}");
-        
+    }
+
+    public static List<Team> csvTeamReader() {
+
+        List<Team> teams = new List<Team>();
+        foreach (string file in Directory.EnumerateFiles("./csv filer/Teams.csv")) {
+
+            using (StreamReader reader = new StreamReader(file)) {
+
+                while (!reader.EndOfStream) {
+                
+                var line = reader.ReadLine();
+                string[] values = line.Split(',');
+
+                Team tuple = new Team(values[0], values[1], values[2]);
+                teams.Add(tuple);
+                
+            }
         }
     }
 }
