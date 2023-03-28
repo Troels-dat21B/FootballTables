@@ -28,10 +28,32 @@ class FileReader {
                 
             }
         }
-        }
+    }
 
     return allGameRounds;
 
     }
 
+    public static List<Team> csvTeamReader() {
+
+        List<Team> teams = new List<Team>();
+        foreach (string file in Directory.EnumerateFiles("./csv filer/Teams.csv")) {
+
+            using (StreamReader reader = new StreamReader(file)) {
+
+                while (!reader.EndOfStream) {
+                
+                var line = reader.ReadLine();
+                string[] values = line.Split(',');
+
+                Team tuple = new Team(values[0], values[1], values[2]);
+                teams.Add(tuple);
+                
+            }
+        }
+    }
+
+    return teams;
+
+    }
 }
