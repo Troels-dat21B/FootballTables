@@ -14,12 +14,20 @@ class FileReader
 
                 foreach (var value in values)
                 {
-                    Console.WriteLine(value);
+                    //Console.WriteLine(value);
                 }
-                Console.WriteLine();
+                //Console.WriteLine();
             }
         }        
 
-        
+        Team testTeam = new Team("test", "test", "test");
+        testTeam.addMatch(4, 2, false);
+        testTeam.addMatch(2, 2, false);
+        Team testTeam2 = new Team("test2", "test2");
+        testTeam2.addMatch(1, 0, true);
+        testTeam2.addMatch(2, 1, true);
+
+        Console.WriteLine(testTeam.ToString());
+        Console.WriteLine(testTeam2.ToString());
     }
 }
