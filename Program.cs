@@ -1,31 +1,34 @@
 ﻿using System;
 using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System.Globalization;
+using CsvHelper;
+namespace Game;
 
-class FileReader
-{
-    static void Main()
-    {
-        /*
-        using (StreamReader reader = new StreamReader("./csv filer/Rounds/Round-1.csv"))
-        {
-            while(!reader.EndOfStream)
-            {
-                var line = reader.ReadLine();
-                var values = line.Split(',');
+class FileReader {
+    static void Main() {
 
-                foreach (var value in values)
-                {
-                    Console.WriteLine(value);
+        List<Game> gameRounds = new List<Game>();
+
+            foreach (string file in Directory.EnumerateFiles("./csv filer/Rounds", "*.csv")) {
+
+                using (StreamReader reader = new StreamReader(file)) {
+                    while (!reader.EndOfStream) {
+                    
+                    var line = reader.ReadLine();
+                    string[] values = line.Split(',');
+    
+                    Game tuple = new Game(values[0], values[1], int.Parse(values[2]), int.Parse(values[3]));
+                    gameRounds.Add(tuple);
+                    
                 }
-                Console.WriteLine();
             }
         }
-        */
 
-        foreach (string file in Directory.EnumerateFiles("./csv filer/Rounds", "*.csv"))
-        {
-            string contents = File.ReadAllText(file);
-            Console.WriteLine(contents);
-        }
+        foreach (Game g in gameRounds) {
+
+            Console.WriteLine(g.roundInfo(g));
+        } 
     }
 }
