@@ -33,4 +33,14 @@ class FileReader {
             Console.WriteLine(g.roundInfo(g));
         }
     }
+
+    public static void Table() {
+        Console.WriteLine("Position  Club                       M  W  D  L  GF  GA  GD  Points  Streak");
+        Console.WriteLine("---------------------------------------------------------------------------");
+
+        foreach(var team in teams){
+        Console.WriteLine("{position} {club} {match} {wins} {draws} {losses} {gf} {ga} {gd} {points} {streak}");
+        
+        }
+    }
 }
