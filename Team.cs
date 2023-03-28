@@ -7,37 +7,50 @@ class Team
     //TODO: add ToString method
     //TODO: add GetStats method
     //TODO: Refactor constructor/Delete constructor
-private int matches { get;}
-private int wins{ get;}
-private int draws{ get;}
-private int losses{ get;}
-private int goalsFor{ get;}
-private int goalsAgainst{ get;}
-private int goalDifference{ get;}
-private int points{ get;}
+private int matches { get; set;}
+private int wins{ get; set;}
+private int draws{ get; set;}
+private int losses{ get; set;}
+private int goalsFor{ get; set;}
+private int goalsAgainst{ get; set;}
+private int goalDifference{ get; set;}
+private int points{ get; set;}
+private string Abriviation{ get;}
+private string FullName{ get;}
+private string? SpecialRanking{ get;}
 
-    public Team([Optional]bool wins, [Optional] bool draws, [Optional] bool losses)
-    {
+
+    public Team(string abriviation, string fullName, [Optional] string specialRanking){
+        this.Abriviation = abriviation;
+        this.FullName = fullName;
+        this.SpecialRanking = specialRanking;
+    }
+
+    public Team addMatch (int goalsFor, int GoalsAgainst, [Optional] bool wonMatch){
         this.matches++;
         this.goalsFor += goalsFor;
-        this.goalsAgainst += goalsAgainst;
-
-        if (wins)
-        {
-            this.wins++;
-            this.points += 3;
-        }
-        else if (losses)
-        {
-            this.losses++;
-        }
-        else if (draws)
-        {
-            this.draws++;
-            this.points++;
-        }
-
+        this.goalsAgainst += GoalsAgainst;
         this.goalDifference = this.goalsFor - this.goalsAgainst;
+
+
+        switch(wonMatch){
+            case true:
+                this.wins++;
+                this.points += 3;
+                break;
+            case false:
+                this.losses++;
+                break;
+            default:
+                this.draws++;
+                this.points++;
+                break;
+        }
+        return this;
+    }
+
+    public override string ToString(){
+        return "Team || M || W || L || D || GF || GA || GD || P || " + System.Environment.NewLine + $"{this.Abriviation} || {this.matches} || {this.wins} || {this.losses} || {this.draws} || {this.goalsFor}  || {this.goalsAgainst}  || {this.goalDifference}  || {this.points} ||";
     }
 
 }

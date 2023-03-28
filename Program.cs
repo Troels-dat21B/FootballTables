@@ -1,6 +1,8 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using System.Globalization;
+using CsvHelper;
 namespace Game;
 
 class FileReader {
@@ -26,7 +28,7 @@ class FileReader {
                 
             }
         }
-    }
+        }
 
     return allGameRounds;
 
