@@ -63,8 +63,6 @@ class FileReader {
         
     }
     
-
     return teams;
-
     }
 }
