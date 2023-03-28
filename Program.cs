@@ -8,7 +8,8 @@ namespace Game;
 class FileReader {
     static void Main() {
 
-        csvAllRoundsReader();
+        //csvAllRoundsReader();
+        csvTeamReader();
     }
 
     public static List<Game> csvAllRoundsReader() {
@@ -30,6 +31,10 @@ class FileReader {
         }
     }
 
+    foreach(Game g in allGameRounds){
+        Console.WriteLine(g.roundInfo(g));
+    }
+
     return allGameRounds;
 
     }
@@ -37,7 +42,7 @@ class FileReader {
     public static List<Team> csvTeamReader() {
 
         List<Team> teams = new List<Team>();
-        foreach (string file in Directory.EnumerateFiles("./csv filer/Teams.csv")) {
+        foreach (string file in Directory.EnumerateFiles("./csv filer" , "Teams.csv")) {
 
             using (StreamReader reader = new StreamReader(file)) {
 
@@ -52,6 +57,12 @@ class FileReader {
             }
         }
     }
+
+    foreach(Team t in teams){
+        Console.WriteLine(t.teamInfo(t));
+        
+    }
+    
 
     return teams;
 

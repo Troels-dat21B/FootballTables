@@ -7,8 +7,4 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Football_tables
-<<<<<<< HEAD
-build_property.ProjectDir = C:\Users\troel\Skrivebord\C# projects\FootballTables\FootballTables\
-=======
 build_property.ProjectDir = /home/rugaard/Documents/Projects/VisualStudioCode/c#_exercises/FootballTables/
->>>>>>> 8d4a8d51eb92179847fc28216f8a820c41425475

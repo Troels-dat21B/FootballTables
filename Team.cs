@@ -49,8 +49,8 @@ private string? SpecialRanking{ get;}
         return this;
     }
 
-    public override string ToString(){
-        return "Team || M || W || L || D || GF || GA || GD || P || " + System.Environment.NewLine + $"{this.Abriviation} || {this.matches} || {this.wins} || {this.losses} || {this.draws} || {this.goalsFor}  || {this.goalsAgainst}  || {this.goalDifference}  || {this.points} ||";
+    public Tuple<string, string, string> teamInfo(Team t) {
+        return new Tuple<string, string, string>(t.Abriviation, t.FullName, t.SpecialRanking);
     }
 
 }
