@@ -2,7 +2,6 @@
 using System.IO;
 using System.Linq;
 using System.Globalization;
-using CsvHelper;
 namespace Game;
 
 class FileReader {
@@ -48,6 +47,7 @@ class FileReader {
 
                 Team tuple = new Team(values[0], values[1], values[2]);
                 teams.Add(tuple);
+                
                 
             }
         }
