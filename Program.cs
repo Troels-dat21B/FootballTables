@@ -1,33 +1,36 @@
 ﻿using System;
 using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System.Globalization;
+namespace Game;
 
-class FileReader
-{
-    static void Main()
-    {
-        using (StreamReader reader = new StreamReader("./csv filer/Rounds/Round-1.csv"))
-        {
-            while(!reader.EndOfStream)
-            {
-                var line = reader.ReadLine();
-                var values = line.Split(',');
+class FileReader {
+    static void Main() {
 
-                foreach (var value in values)
-                {
-                    //Console.WriteLine(value);
+        List<Game> gameRounds = new List<Game>();
+        var i = 0;
+        foreach (string file in Directory.EnumerateFiles("./csv filer/Rounds", "*.csv")) {
+
+            using (StreamReader reader = new StreamReader(file)) {
+                while (!reader.EndOfStream) {
+                    i += 1;
+                    
+                    var line = reader.ReadLine();
+                    Console.WriteLine(line);
+                    Console.WriteLine(i);
+                    string[] values = line.Split(',');
+
+                    Game tuple = new Game(values[0], values[1], int.Parse(values[2]), int.Parse(values[3]));
+                    gameRounds.Add(tuple);
+                    
                 }
-                //Console.WriteLine();
             }
-        }        
+        }
 
-        Team testTeam = new Team("test", "test", "test");
-        testTeam.addMatch(4, 2, false);
-        testTeam.addMatch(2, 2, false);
-        Team testTeam2 = new Team("test2", "test2");
-        testTeam2.addMatch(1, 0, true);
-        testTeam2.addMatch(2, 1, true);
+        foreach (Game g in gameRounds) {
 
-        Console.WriteLine(testTeam.ToString());
-        Console.WriteLine(testTeam2.ToString());
+            Console.WriteLine(g.roundInfo(g));
+        }
     }
 }

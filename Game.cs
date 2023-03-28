@@ -1,16 +1,33 @@
 
+using System;
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+namespace Game;
+
 public class Game{
 
-    public String HomeTeam { get; set; }
-    public String AwayTeam { get; set; }
+    public string HomeTeam { get; set; }
+    public string AwayTeam { get; set; }
     public int HomeTeamGoals { get; set; }
     public int AwayTeamGoals { get; set; }
 
-    public Game(String homeTeam, String awayTeam, int homeTeamGoals, int awayTeamGoals){
-        HomeTeam = homeTeam;
-        AwayTeam = awayTeam;
-        HomeTeamGoals = homeTeamGoals;
-        AwayTeamGoals = awayTeamGoals;
-    }   
+    public Game(string homeTeam, string awayTeam, int homeTeamGoals, int awayTeamGoals){
+        this.HomeTeam = homeTeam;
+        this.AwayTeam = awayTeam;
+        this.HomeTeamGoals = homeTeamGoals;
+        this.AwayTeamGoals = awayTeamGoals;
+    }
+
+    public Game() {
+        this.HomeTeam = "";
+        this.AwayTeam = "";
+        this.HomeTeamGoals = 0;
+        this.AwayTeamGoals = 0;
+    }
+
+    public Tuple<string, string, int, int> roundInfo(Game g) {
+        return new Tuple<string, string, int, int>(g.HomeTeam, g.AwayTeam, g.HomeTeamGoals, g.AwayTeamGoals);
+    }
 
 }
