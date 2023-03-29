@@ -60,4 +60,16 @@ class FileReader {
     
     return teams;
     }
+
+    public static void Table() {
+        List<Team> teams = csvTeamReader();
+
+        Console.WriteLine("Position  Club                       M  W  D  L  GF  GA  GD  Points  Streak");
+        Console.WriteLine("---------------------------------------------------------------------------");
+
+        foreach(Team t in teams){
+
+        //Console.WriteLine("{position} {club} {match} {wins} {draws} {losses} {gf} {ga} {gd} {points} {streak}");
+        }
+    }
 }
