@@ -15,8 +15,6 @@ private string abriviation;
 private string fullName;
 private string? specialRanking;
 
-  
-
     public string Abriviation {
         get { return abriviation; }
         set { abriviation = value; }
@@ -32,7 +30,7 @@ private string? specialRanking;
         set { specialRanking = value; }
     }
 
-    public Team(string abriviation, string fullName, string? specialRanking){
+    public Team(string abriviation, string fullName, string specialRanking){
         this.abriviation = abriviation;
         this.fullName = fullName;
         this.specialRanking = specialRanking;
