@@ -7,7 +7,11 @@ class FileReader {
     static void Main() {
 
         //csvAllRoundsReader();
-        csvTeamReader();
+        //csvTeamReader();
+
+        Team test1 = new Team("BIF", "Bodø/Glimt");
+        test1.addMatch(1,1);
+        Console.WriteLine(test1.getStats());
     }
 
     public static List<Game> csvAllRoundsReader() {
