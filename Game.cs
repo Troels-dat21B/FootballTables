@@ -25,7 +25,7 @@ public class Game{
         this.AwayTeamGoals = 0;
     }
 
-    public Tuple<string, string, int, int> roundInfo(Game g) {
+    public static Tuple<string, string, int, int> roundInfo(Game g) {
         return new Tuple<string, string, int, int>(g.HomeTeam, g.AwayTeam, g.HomeTeamGoals, g.AwayTeamGoals);
     }
 
