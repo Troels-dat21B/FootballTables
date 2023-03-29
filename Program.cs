@@ -9,8 +9,8 @@ class FileReader
     {
         csvAllRoundsReader();
         csvTeamReader();
-        //Table();
         Round();
+        //Table();
 
     }
 
@@ -84,7 +84,8 @@ class FileReader
         return teams;
     }
 
-    public static void Table() {
+    public static void Table()
+    {
         Console.ForegroundColor = ConsoleColor.Black;
         List<Team> teams = csvTeamReader();
 
@@ -94,25 +95,26 @@ class FileReader
         foreach (Team t in teams)
         {
 
-        switch (t.SpecialRanking) {
-        case "N":
-            Console.ForegroundColor = ConsoleColor.Magenta;
-            break;
-        case "C":
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            break;
-        case "P":
-            Console.ForegroundColor = ConsoleColor.Green;
-            break;
-        case "W":
-            Console.ForegroundColor = ConsoleColor.Blue;
-            break;
-        default:
-            Console.ResetColor();
-            break;
-        }
+            switch (t.SpecialRanking)
+            {
+                case "N":
+                    Console.ForegroundColor = ConsoleColor.Magenta;
+                    break;
+                case "C":
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    break;
+                case "P":
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    break;
+                case "W":
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    break;
+                default:
+                    Console.ResetColor();
+                    break;
+            }
 
-        Console.WriteLine($"{t.Abriviation,-3} | {t.FullName,-25} | {t.SpecialRanking}");
+            Console.WriteLine($"{t.Abriviation,-3} | {t.FullName,-25} | {t.SpecialRanking}");
             Console.WriteLine($"{t.Abriviation} {t.FullName} {t.SpecialRanking}");
         }
         Console.ForegroundColor = ConsoleColor.Black;
@@ -133,17 +135,23 @@ class FileReader
             //ignore away team name, but keep the goals
             //If statement to check who won the match
 
+            //TODO - Dette stykke kode tjekker ikke om for udebane kampe. Så 16 kampe bliver ikke redegjort for.
+
             foreach (Team t in teams)
             {
-                Console.WriteLine(t.Abriviation);
+
                 if (t.Abriviation.ToLower() == g.HomeTeam.ToLower())
                 {
                     if (g.HomeTeamGoals > g.AwayTeamGoals)
                     {
                         t.addMatch(g.HomeTeamGoals, g.AwayTeamGoals, true);
-                    }else if(g.HomeTeamGoals < g.AwayTeamGoals){
+                    }
+                    else if (g.HomeTeamGoals < g.AwayTeamGoals)
+                    {
                         t.addMatch(g.HomeTeamGoals, g.AwayTeamGoals, false);
-                    }else{
+                    }
+                    else
+                    {
                         t.addMatch(g.HomeTeamGoals, g.AwayTeamGoals);
                     }
                 }
@@ -151,8 +159,20 @@ class FileReader
             }
         }
 
+        Console.WriteLine("Før point sortering");
+
         foreach (Team t in teams)
         {
+
+            Console.WriteLine(t.getStats());
+        }
+
+        teams.Sort((x, y) => y.Points.CompareTo(x.Points)); //<---- Sorterer efter point flest til mindst
+        Console.WriteLine("Efter point sortering");
+
+        foreach (Team t in teams)
+        {
+
             Console.WriteLine(t.getStats());
         }
     }

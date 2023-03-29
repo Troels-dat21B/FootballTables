@@ -10,7 +10,7 @@ Marking & Deliverables
   [x]  Properties (get/set i Team.cs)
   [x]  Named & optional parameters (Vi har brugt optional parameters i Team.cs)
   [x]  Tupples, deconstruction (Vi har brugt Tuples for at printe data fra Team klassen og Game klassen. Vi er så kommet ud for det der hedder 'Octuple' i Team klassen)
-  [x]  Exception (Vi har brugt exceptions i Program.cs i forbindelse med fil læsning)
+  []  Exception
   [x]  Attributes and DataValidation
   [x]  Arrays / Collections
   []  Ranges
