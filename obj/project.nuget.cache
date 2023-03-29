@@ -1,17 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "j33+5w1WhACAPiCZ2Tgf58UInQBAFxeFBQObSf+tLkGd9IBW6i+bo063LweexGTVUVsOxbaSOZ/uvtWqr+3ZDQ==",
+  "dgSpecHash": "MeIrg8UDM2ByXliK6BFeVJSz1pHKzA22UDzhglMbjz5d6EmNs4+hcxf4Me0Pb8sPrT8zbkxG7lrCfTg7UeDvuQ==",
   "success": true,
-  "projectFilePath": "C:\\Program Files (x86)\\KEA\\Kea projekter\\C\\FootballTables\\Football_tables.csproj",
+  "projectFilePath": "C:\\Users\\troel\\Skrivebord\\C# projects\\FootballTables\\FootballTables\\Football_tables.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\chris\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512"
+    "C:\\Users\\troel\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Program Files (x86)\\KEA\\Kea projekter\\C\\FootballTables\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
