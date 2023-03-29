@@ -3,10 +3,6 @@ using System.Runtime.InteropServices;
 class Team
 {
 
-    //TODO: add AddGame method
-    //TODO: add ToString method
-    //TODO: add GetStats method
-    //TODO: Refactor constructor/Delete constructor
 private int matches { get; set;}
 private int wins{ get; set;}
 private int draws{ get; set;}
@@ -18,8 +14,6 @@ private int points{ get; set;}
 private string abriviation;
 private string fullName;
 private string? specialRanking;
-
-  
 
     public string Abriviation {
         get { return abriviation; }
@@ -36,7 +30,7 @@ private string? specialRanking;
         set { specialRanking = value; }
     }
 
-    public Team(string abriviation, string fullName, string? specialRanking){
+    public Team(string abriviation, string fullName, string specialRanking){
         this.abriviation = abriviation;
         this.fullName = fullName;
         this.specialRanking = specialRanking;
