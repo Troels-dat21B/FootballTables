@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Program Files (x86)\\KEA\\Kea projekter\\C\\FootballTables\\Football_tables.csproj": {}
+    "/home/rugaard/Documents/Projects/VisualStudioCode/c#_exercises/FootballTables/Football_tables.csproj": {}
   },
   "projects": {
-    "C:\\Program Files (x86)\\KEA\\Kea projekter\\C\\FootballTables\\Football_tables.csproj": {
+    "/home/rugaard/Documents/Projects/VisualStudioCode/c#_exercises/FootballTables/Football_tables.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Program Files (x86)\\KEA\\Kea projekter\\C\\FootballTables\\Football_tables.csproj",
+        "projectUniqueName": "/home/rugaard/Documents/Projects/VisualStudioCode/c#_exercises/FootballTables/Football_tables.csproj",
         "projectName": "Football_tables",
-        "projectPath": "C:\\Program Files (x86)\\KEA\\Kea projekter\\C\\FootballTables\\Football_tables.csproj",
-        "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
-        "outputPath": "C:\\Program Files (x86)\\KEA\\Kea projekter\\C\\FootballTables\\obj\\",
+        "projectPath": "/home/rugaard/Documents/Projects/VisualStudioCode/c#_exercises/FootballTables/Football_tables.csproj",
+        "packagesPath": "/home/rugaard/.nuget/packages/",
+        "outputPath": "/home/rugaard/Documents/Projects/VisualStudioCode/c#_exercises/FootballTables/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/rugaard/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -49,8 +49,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -59,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.113/RuntimeIdentifierGraph.json"
         }
       }
     }

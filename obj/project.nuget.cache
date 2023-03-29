@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "j33+5w1WhACAPiCZ2Tgf58UInQBAFxeFBQObSf+tLkGd9IBW6i+bo063LweexGTVUVsOxbaSOZ/uvtWqr+3ZDQ==",
+  "dgSpecHash": "beD+TCIL2jon9cddi+GgPQ2mirqV3ZnWu00MbAETNXPSB5l545j4167o55ewZCejPpxqQEASR59jp5DLBhBdAQ==",
   "success": true,
-  "projectFilePath": "C:\\Program Files (x86)\\KEA\\Kea projekter\\C\\FootballTables\\Football_tables.csproj",
+  "projectFilePath": "/home/rugaard/Documents/Projects/VisualStudioCode/c#_exercises/FootballTables/Football_tables.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\chris\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512"
+    "/home/rugaard/.nuget/packages/csvhelper/30.0.1/csvhelper.30.0.1.nupkg.sha512"
   ],
   "logs": []
 }

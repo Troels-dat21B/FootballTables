@@ -7,6 +7,7 @@ class FileReader {
     static void Main() {
         //csvAllRoundsReader();
         //csvTeamReader();
+        Table();
     }
 
     public static List<Game> csvAllRoundsReader() {
@@ -26,10 +27,6 @@ class FileReader {
                 
             }
         }
-    }
-
-    foreach(Game g in allGameRounds) {
-        Console.WriteLine(g.roundInfo(g));
     }
 
     return allGameRounds;
@@ -53,10 +50,6 @@ class FileReader {
             }
         }
     }
-
-    foreach(Team t in teams) {
-        Console.WriteLine(t.teamInfo(t));
-    }
     
     return teams;
     }
@@ -69,7 +62,7 @@ class FileReader {
 
         foreach(Team t in teams){
 
-        //Console.WriteLine("{position} {club} {match} {wins} {draws} {losses} {gf} {ga} {gd} {points} {streak}");
+        Console.WriteLine($"{t.Abriviation} {t.FullName} {t.SpecialRanking}");
         }
     }
 }

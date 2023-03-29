@@ -15,15 +15,30 @@ private int goalsFor{ get; set;}
 private int goalsAgainst{ get; set;}
 private int goalDifference{ get; set;}
 private int points{ get; set;}
-private string Abriviation{ get;}
-private string FullName{ get;}
-private string? SpecialRanking{ get;}
+private string abriviation;
+private string fullName;
+private string? specialRanking;
 
 
-    public Team(string abriviation, string fullName, [Optional] string specialRanking){
-        this.Abriviation = abriviation;
-        this.FullName = fullName;
-        this.SpecialRanking = specialRanking;
+    public string Abriviation {
+        get { return abriviation; }
+        set { abriviation = value; }
+    }
+
+    public string FullName {
+        get { return fullName; }
+        set { fullName = value; }
+    }
+
+    public string? SpecialRanking {
+        get { return specialRanking; }
+        set { specialRanking = value; }
+    }
+
+    public Team(string abriviation, string fullName, string specialRanking){
+        this.abriviation = abriviation;
+        this.fullName = fullName;
+        this.specialRanking = specialRanking;
     }
 
     public Team addMatch (int goalsFor, int GoalsAgainst, [Optional] bool wonMatch){
