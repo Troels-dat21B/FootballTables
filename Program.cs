@@ -7,12 +7,13 @@ class FileReader {
     static void Main() {
         //csvAllRoundsReader();
         //csvTeamReader();
-        Table();
+        //Table();
     }
 
     public static List<Game> csvAllRoundsReader() {
 
         List<Game> allGameRounds = new List<Game>();
+        try{
         foreach (string file in Directory.EnumerateFiles("./csv filer/Rounds", "*.csv")) {
 
             using (StreamReader reader = new StreamReader(file)) {
@@ -28,6 +29,10 @@ class FileReader {
             }
         }
     }
+    } catch (Exception e) {
+        Console.WriteLine("CSV file not found.");
+        Console.WriteLine(e.Message);
+    }
 
     return allGameRounds;
     }
@@ -35,30 +40,30 @@ class FileReader {
     public static List<Team> csvTeamReader() {
 
         List<Team> teams = new List<Team>();
-        foreach (string file in Directory.EnumerateFiles("./csv filer" , "Teams.csv")) {
+        try{
+            
+            foreach (string file in Directory.EnumerateFiles("./csv filer" , "Teams.csv")) {
 
-            using (StreamReader reader = new StreamReader(file)) {
+                using (StreamReader reader = new StreamReader(file)) {
 
-                while (!reader.EndOfStream) {
+                    while (!reader.EndOfStream) {
                 
-                var line = reader.ReadLine();
-                string[] values = line.Split(',');
+                    var line = reader.ReadLine();
+                    string[] values = line.Split(',');
 
-                Team tuple = new Team(values[0], values[1], values[2]);
-                teams.Add(tuple);
+                    Team tuple = new Team(values[0], values[1], values[2]);
+                    teams.Add(tuple);
                 
+                }
             }
         }
-    }
+        } catch (Exception e) {
+            Console.WriteLine("CSV file not found.");
+            Console.WriteLine(e.Message);
+        }
     
-        Console.WriteLine("Position  Club                       M  W  D  L  GF  GA  GD  Points  Streak");
-        Console.WriteLine("---------------------------------------------------------------------------");
-
-    foreach(Team t in teams){
-        Console.WriteLine($"{t.Abriviation}");
-    }
     
-    return teams;
+        return teams;
     }
 
     public static void Table() {
