@@ -5,13 +5,9 @@ using System.Globalization;
 
 class FileReader {
     static void Main() {
-
         //csvAllRoundsReader();
         //csvTeamReader();
-
-        Team test1 = new Team("BIF", "Bodø/Glimt");
-        test1.addMatch(1,1);
-        Console.WriteLine(test1.getStats());
+        Table();
     }
 
     public static List<Game> csvAllRoundsReader() {
@@ -33,12 +29,7 @@ class FileReader {
         }
     }
 
-    foreach(Game g in allGameRounds){
-        Console.WriteLine(g.roundInfo(g));
-    }
-
     return allGameRounds;
-
     }
 
     public static List<Team> csvTeamReader() {
@@ -55,7 +46,6 @@ class FileReader {
 
                 Team tuple = new Team(values[0], values[1], values[2]);
                 teams.Add(tuple);
-                
                 
             }
         }
@@ -79,7 +69,7 @@ class FileReader {
 
         foreach(Team t in teams){
 
-        //Console.WriteLine($"{position} {club} {match} {wins} {draws} {losses} {gf} {ga} {gd} {points} {streak}");
+        Console.WriteLine($"{t.Abriviation} {t.FullName} {t.SpecialRanking}");
         }
     }
 }
