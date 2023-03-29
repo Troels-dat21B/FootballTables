@@ -2,13 +2,11 @@
 using System.IO;
 using System.Linq;
 using System.Globalization;
-namespace Game;
 
 class FileReader {
     static void Main() {
-
         //csvAllRoundsReader();
-        csvTeamReader();
+        //csvTeamReader();
     }
 
     public static List<Game> csvAllRoundsReader() {
@@ -30,12 +28,11 @@ class FileReader {
         }
     }
 
-    foreach(Game g in allGameRounds){
+    foreach(Game g in allGameRounds) {
         Console.WriteLine(g.roundInfo(g));
     }
 
     return allGameRounds;
-
     }
 
     public static List<Team> csvTeamReader() {
@@ -53,14 +50,12 @@ class FileReader {
                 Team tuple = new Team(values[0], values[1], values[2]);
                 teams.Add(tuple);
                 
-                
             }
         }
     }
 
-    foreach(Team t in teams){
+    foreach(Team t in teams) {
         Console.WriteLine(t.teamInfo(t));
-        
     }
     
     return teams;
