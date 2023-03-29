@@ -56,10 +56,12 @@ class FileReader {
             }
         }
     }
+    
+        Console.WriteLine("Position  Club                       M  W  D  L  GF  GA  GD  Points  Streak");
+        Console.WriteLine("---------------------------------------------------------------------------");
 
     foreach(Team t in teams){
-        Console.WriteLine(t.teamInfo(t));
-        
+        Console.WriteLine($"{t.Abriviation}");
     }
     
     return teams;
@@ -73,7 +75,7 @@ class FileReader {
 
         foreach(Team t in teams){
 
-        //Console.WriteLine("{position} {club} {match} {wins} {draws} {losses} {gf} {ga} {gd} {points} {streak}");
+        //Console.WriteLine($"{position} {club} {match} {wins} {draws} {losses} {gf} {ga} {gd} {points} {streak}");
         }
     }
 }
