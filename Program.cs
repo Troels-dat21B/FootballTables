@@ -51,6 +51,13 @@ class FileReader {
         }
     }
     
+        Console.WriteLine("Position  Club                       M  W  D  L  GF  GA  GD  Points  Streak");
+        Console.WriteLine("---------------------------------------------------------------------------");
+
+    foreach(Team t in teams){
+        Console.WriteLine($"{t.Abriviation}");
+    }
+    
     return teams;
     }
 
