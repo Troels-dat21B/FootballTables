@@ -7,7 +7,7 @@ class FileReader {
     static void Main() {
         //csvAllRoundsReader();
         //csvTeamReader();
-        //Table();
+        Table();
     }
 
     public static List<Game> csvAllRoundsReader() {
@@ -67,14 +67,36 @@ class FileReader {
     }
 
     public static void Table() {
+        Console.ForegroundColor = ConsoleColor.Black;
         List<Team> teams = csvTeamReader();
 
-        Console.WriteLine("Position  Club                       M  W  D  L  GF  GA  GD  Points  Streak");
-        Console.WriteLine("---------------------------------------------------------------------------");
+        Console.WriteLine("Club  Name                      Rank");
+        Console.WriteLine("------------------------------------");
 
         foreach(Team t in teams){
 
-        Console.WriteLine($"{t.Abriviation} {t.FullName} {t.SpecialRanking}");
+        switch (t.SpecialRanking) {
+        case "N":
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            break;
+        case "C":
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            break;
+        case "P":
+            Console.ForegroundColor = ConsoleColor.Green;
+            break;
+        case "W":
+            Console.ForegroundColor = ConsoleColor.Blue;
+            break;
+        default:
+            Console.ResetColor();
+            break;
         }
+
+        Console.WriteLine($"{t.Abriviation,-3} | {t.FullName,-25} | {t.SpecialRanking}");
+        }
+        Console.ForegroundColor = ConsoleColor.Black;
     }
+    
 }
+        
