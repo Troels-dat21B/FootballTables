@@ -5,10 +5,14 @@
       "CsvHelper/30.0.1": {
         "type": "package",
         "compile": {
-          "lib/net6.0/CsvHelper.dll": {}
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net6.0/CsvHelper.dll": {}
+          "lib/net6.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
         }
       }
     }
@@ -45,34 +49,19 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "/home/rugaard/.nuget/packages/": {}
-=======
     "C:\\Users\\troel\\.nuget\\packages\\": {}
->>>>>>> 0f72bdc593a066e745200d1c934af9b6007c2e16
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "/home/rugaard/Documents/Projects/VisualStudioCode/c#_exercises/FootballTables/Football_tables.csproj",
+      "projectUniqueName": "c:\\Users\\troel\\Skrivebord\\C# projects\\FootballTables\\FootballTables\\Football_tables.csproj",
       "projectName": "Football_tables",
-      "projectPath": "/home/rugaard/Documents/Projects/VisualStudioCode/c#_exercises/FootballTables/Football_tables.csproj",
-      "packagesPath": "/home/rugaard/.nuget/packages/",
-      "outputPath": "/home/rugaard/Documents/Projects/VisualStudioCode/c#_exercises/FootballTables/obj/",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "/home/rugaard/.nuget/NuGet/NuGet.Config"
-=======
-      "projectUniqueName": "C:\\Users\\troel\\Skrivebord\\C# projects\\FootballTables\\FootballTables\\Football_tables.csproj",
-      "projectName": "Football_tables",
-      "projectPath": "C:\\Users\\troel\\Skrivebord\\C# projects\\FootballTables\\FootballTables\\Football_tables.csproj",
+      "projectPath": "c:\\Users\\troel\\Skrivebord\\C# projects\\FootballTables\\FootballTables\\Football_tables.csproj",
       "packagesPath": "C:\\Users\\troel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\troel\\Skrivebord\\C# projects\\FootballTables\\FootballTables\\obj\\",
+      "outputPath": "c:\\Users\\troel\\Skrivebord\\C# projects\\FootballTables\\FootballTables\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\troel\\AppData\\Roaming\\NuGet\\NuGet.Config"
->>>>>>> 0f72bdc593a066e745200d1c934af9b6007c2e16
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -107,7 +96,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -116,8 +106,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.113/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file c:\\Users\\troel\\Skrivebord\\C# projects\\FootballTables\\FootballTables\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
