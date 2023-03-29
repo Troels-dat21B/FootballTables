@@ -2,7 +2,6 @@
 using System.IO;
 using System.Linq;
 using System.Globalization;
-namespace Game;
 
 class FileReader {
     static void Main() {
