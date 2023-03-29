@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Program Files (x86)\\KEA\\Kea projekter\\C\\FootballTables\\Football_tables.csproj": {}
+    "C:\\Users\\troel\\Skrivebord\\C# projects\\FootballTables\\FootballTables\\Football_tables.csproj": {}
   },
   "projects": {
-    "C:\\Program Files (x86)\\KEA\\Kea projekter\\C\\FootballTables\\Football_tables.csproj": {
+    "C:\\Users\\troel\\Skrivebord\\C# projects\\FootballTables\\FootballTables\\Football_tables.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Program Files (x86)\\KEA\\Kea projekter\\C\\FootballTables\\Football_tables.csproj",
+        "projectUniqueName": "C:\\Users\\troel\\Skrivebord\\C# projects\\FootballTables\\FootballTables\\Football_tables.csproj",
         "projectName": "Football_tables",
-        "projectPath": "C:\\Program Files (x86)\\KEA\\Kea projekter\\C\\FootballTables\\Football_tables.csproj",
-        "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
-        "outputPath": "C:\\Program Files (x86)\\KEA\\Kea projekter\\C\\FootballTables\\obj\\",
+        "projectPath": "C:\\Users\\troel\\Skrivebord\\C# projects\\FootballTables\\FootballTables\\Football_tables.csproj",
+        "packagesPath": "C:\\Users\\troel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\troel\\Skrivebord\\C# projects\\FootballTables\\FootballTables\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\troel\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
