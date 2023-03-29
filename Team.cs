@@ -19,16 +19,7 @@ private int points{ get; set;}
 private string abriviation;
 private string fullName;
 private string? specialRanking;
-=======
-private string abriviation{ get;}
-private string fullName{ get;}
-private string? specialRanking{ get;}
->>>>>>> 0f72bdc593a066e745200d1c934af9b6007c2e16
 
-  
-
-<<<<<<< HEAD
-    public string Abriviation {
         get { return abriviation; }
         set { abriviation = value; }
     }
