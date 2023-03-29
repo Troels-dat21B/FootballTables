@@ -36,7 +36,7 @@ private string? specialRanking;
         set { specialRanking = value; }
     }
 
-    public Team(string abriviation, string fullName, string specialRanking){
+    public Team(string abriviation, string fullName, string? specialRanking){
         this.abriviation = abriviation;
         this.fullName = fullName;
         this.specialRanking = specialRanking;
