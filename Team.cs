@@ -3,10 +3,6 @@ using System.Runtime.InteropServices;
 class Team
 {
 
-    //TODO: add AddGame method
-    //TODO: add ToString method
-    //TODO: add GetStats method
-    //TODO: Refactor constructor/Delete constructor
 private int matches { get; set;}
 private int wins{ get; set;}
 private int draws{ get; set;}
