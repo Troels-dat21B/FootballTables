@@ -14,7 +14,7 @@ class FileReader
         //testPrint();
 
         Console.WriteLine("Write the abbreviation of the team you want to see the results of: ");
-        string team = Console.ReadLine();
+        string? team = Console.ReadLine();
 
         foreach(Team t in csvTeamReader()){
             
