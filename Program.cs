@@ -198,7 +198,7 @@ class FileReader
         List<Game> allGameRounds = csvAllRoundsReader();
         foreach(Game g in allGameRounds){
             if(g.HomeTeam == "AAB" && g.HomeTeamGoals > g.AwayTeamGoals){
-                Console.WriteLine(g.roundInfo(g));
+                Console.WriteLine(g.HomeTeam + " " + g.HomeTeamGoals + " - " + g.AwayTeamGoals + " " + g.AwayTeam);
             }
         }
     }
