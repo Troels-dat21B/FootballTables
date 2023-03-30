@@ -30,6 +30,11 @@ private string? specialRanking;
         set { specialRanking = value; }
     }
 
+    public int Points{
+        get { return points; }
+        set { points = value; }
+    }
+
     public Team(string abriviation, string fullName, string specialRanking){
         this.abriviation = abriviation;
         this.fullName = fullName;
@@ -63,8 +68,12 @@ private string? specialRanking;
         return new Tuple<string, string, string?>(t.abriviation, t.fullName, t.specialRanking);
     }
 
-    public Tuple<int, int, int, int, int, int, int, Tuple<int>> getStats(){
-        return new Tuple<int, int, int, int, int, int, int, Tuple<int>>(this.matches, this.wins, this.draws, this.losses, this.goalsFor, this.goalsAgainst, this.goalDifference, new Tuple<int>(this.points));
+    //public Tuple<int, int, int, int, int, int, int, Tuple<int>> getStats(){
+      //  return new Tuple<int, int, int, int, int, int, int, Tuple<int>>(this.matches, this.wins, this.draws, this.losses, this.goalsFor, this.goalsAgainst, this.goalDifference, new Tuple<int>(this.points));
+    //}
+
+    public Tuple<string, Tuple<int, int, int, int, int, int, int, Tuple<int>>> getStats(){
+        return new Tuple<string, Tuple<int, int, int, int, int, int, int, Tuple<int>>>(this.abriviation, new Tuple<int, int, int, int, int, int, int, Tuple<int>>(this.matches, this.wins, this.draws, this.losses, this.goalsFor, this.goalsAgainst, this.goalDifference, new Tuple<int>(this.points)));
     }
 
 }
