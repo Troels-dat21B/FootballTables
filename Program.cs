@@ -4,10 +4,27 @@ using System.Linq;
 using System.Globalization;
 
 class FileReader {
-    static void Main() {
+    static void Main(string[] args) {
         //csvAllRoundsReader();
         //csvTeamReader();
         //Table();
+        //testPrint();
+
+        Console.WriteLine("Write the abbreviation of the team you want to see the results of: ");
+        string team = Console.ReadLine();
+
+        foreach(Team t in csvTeamReader()){
+            
+            if(string.Equals(t.Abriviation, team, StringComparison.OrdinalIgnoreCase)){
+                Console.WriteLine(t.Abriviation + " | " + t.FullName + " | " + t.SpecialRanking);
+            }
+            else if(string.Equals("all", team, StringComparison.OrdinalIgnoreCase)){
+                Console.WriteLine(t.Abriviation + " | " + t.FullName + " | " + t.SpecialRanking);
+            }
+            else{
+                Console.WriteLine("Team not found.");
+            }
+        }
     }
 
     public static List<Game> csvAllRoundsReader() {
@@ -75,6 +92,15 @@ class FileReader {
         foreach(Team t in teams){
 
         Console.WriteLine($"{t.Abriviation} {t.FullName} {t.SpecialRanking}");
+        }
+    }
+
+    public static void testPrint() {
+        List<Game> allGameRounds = csvAllRoundsReader();
+        foreach(Game g in allGameRounds){
+            if(g.HomeTeam == "AAB" && g.HomeTeamGoals > g.AwayTeamGoals){
+                Console.WriteLine(g.roundInfo(g));
+            }
         }
     }
 }
