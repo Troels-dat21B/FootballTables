@@ -1,6 +1,4 @@
-#
-
-Marking & Deliverables
+# Marking & Deliverables
 
   []  Type system
   [x]  Null handling (En af Team Constructerne har en optional parameter, som er null, hvis den ikke bliver brugt. Ved at sætte "?" efter datatypen vil den kunne være null.)
