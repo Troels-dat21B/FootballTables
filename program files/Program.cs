@@ -7,6 +7,8 @@ class FileReader
 {
     static void Main(string[] args)
     {
+        csvTeamReader();
+        csvAllRoundsReader();
         Round();
         Table();
         searchTeam();
@@ -18,22 +20,23 @@ class FileReader
     {
         Console.WriteLine("Write the abbreviation of the team you want to see the results of: ");
         string? team = Console.ReadLine();
-
+        bool found = false;
         foreach (Team t in csvTeamReader())
         {
             if (string.Equals(t.Abriviation, team, StringComparison.OrdinalIgnoreCase))
             {
                 Console.WriteLine(t.Abriviation + " | " + t.FullName + " | " + t.SpecialRanking);
-            }
-            else
-            {
-                Console.WriteLine("Team not found");
+                found = true; //For ikke den skal blive ved med at skrive "Team not found"
                 break;
             }
             if (string.Equals("all", team, StringComparison.OrdinalIgnoreCase))
             {
                 Console.WriteLine(t.Abriviation + " | " + t.FullName + " | " + t.SpecialRanking);
             }
+        }
+        if (!found)
+        {
+            Console.WriteLine("Team not found");
         }
     }
 
@@ -194,18 +197,6 @@ class FileReader
 
     }
 
-    public static void testPrint()
-    {
-
-        List<Game> allGameRounds = csvAllRoundsReader();
-        foreach (Game g in allGameRounds)
-        {
-            if (g.HomeTeam == "AAB")
-            {
-                Console.WriteLine(g.HomeTeam + " " + g.HomeTeamGoals + " - " + g.AwayTeamGoals + " " + g.AwayTeam);
-            }
-        }
-    }
 
     public static void printing(List<Team> teams)
     {
@@ -220,7 +211,7 @@ class FileReader
             {
                 color = ConsoleColor.Blue; // print the first team in blue
             }
-            else if (i >= 1 && i <= 5)
+            else if (i < 5)
             {
                 color = ConsoleColor.Green; // print the next 5 teams in green
             }
