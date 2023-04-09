@@ -41,6 +41,34 @@ private string? specialRanking;
         this.specialRanking = specialRanking;
     }
 
+    public int GoalDifference{
+        get { return goalDifference; }        
+    }
+
+    public int GoalsAgainst{
+        get { return goalsAgainst; }
+    }
+
+    public int GoalsFor{
+        get { return goalsFor; }
+    }
+
+    public int Losses{
+        get { return losses; }
+    }
+
+    public int Draws{
+        get { return draws; }
+    }
+
+    public int Wins{
+        get { return wins; }
+    }
+
+    public int Matches{
+        get { return matches; }
+    }
+
     public Team addMatch (int goalsFor, int GoalsAgainst, [Optional] bool? wonMatch){
         this.matches++;
         this.goalsFor += goalsFor;
@@ -68,9 +96,7 @@ private string? specialRanking;
         return new Tuple<string, string, string?>(t.abriviation, t.fullName, t.specialRanking);
     }
 
-    //public Tuple<int, int, int, int, int, int, int, Tuple<int>> getStats(){
-      //  return new Tuple<int, int, int, int, int, int, int, Tuple<int>>(this.matches, this.wins, this.draws, this.losses, this.goalsFor, this.goalsAgainst, this.goalDifference, new Tuple<int>(this.points));
-    //}
+
 
     public Tuple<string, Tuple<int, int, int, int, int, int, int, Tuple<int>>> getStats(){
         return new Tuple<string, Tuple<int, int, int, int, int, int, int, Tuple<int>>>(this.abriviation, new Tuple<int, int, int, int, int, int, int, Tuple<int>>(this.matches, this.wins, this.draws, this.losses, this.goalsFor, this.goalsAgainst, this.goalDifference, new Tuple<int>(this.points)));

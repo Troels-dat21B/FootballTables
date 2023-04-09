@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "beD+TCIL2jon9cddi+GgPQ2mirqV3ZnWu00MbAETNXPSB5l545j4167o55ewZCejPpxqQEASR59jp5DLBhBdAQ==",
+  "dgSpecHash": "MeIrg8UDM2ByXliK6BFeVJSz1pHKzA22UDzhglMbjz5d6EmNs4+hcxf4Me0Pb8sPrT8zbkxG7lrCfTg7UeDvuQ==",
   "success": true,
-  "projectFilePath": "/home/rugaard/Documents/Projects/VisualStudioCode/c#_exercises/FootballTables/Football_tables.csproj",
+  "projectFilePath": "C:\\Users\\troel\\Skrivebord\\C# projects\\FootballTables\\FootballTables\\Football_tables.csproj",
   "expectedPackageFiles": [
-    "/home/rugaard/.nuget/packages/csvhelper/30.0.1/csvhelper.30.0.1.nupkg.sha512"
+    "C:\\Users\\troel\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512"
   ],
   "logs": []
 }

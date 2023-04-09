@@ -1,0 +1,73 @@
+### Printing method with ChatGPT-3
+Troels - when printing the data from a list (the list is containing objects resembling teams with difference stats) how do i write in C# so the print statement will take account for teams in the same positions and instead of having two teams having "1" next to them, only the first will have a number and the otheres will have a dash
+
+Chat - To achieve this, you can keep track of the previous team's position number while iterating through the list of teams. If the current team's position number is the same as the previous team's position number, you can print a dash instead of the position number. Here's an example implementation in C#:
+
+arduino
+
+List<Team> teams = GetTeams(); // assuming GetTeams() returns a list of Team objects
+int previousPosition = -1; // initialize to an invalid value
+
+foreach (Team team in teams)
+{
+    if (team.Position != previousPosition)
+    {
+        Console.Write(team.Position); // print the position number
+        previousPosition = team.Position;
+    }
+    else
+    {
+        Console.Write("-"); // print a dash instead of the position number
+    }
+
+    Console.Write("\t" + team.Name); // print the team name
+    Console.Write("\t" + team.Wins); // print the team's wins (or any other stats you want to display)
+    Console.Write("\t" + team.Losses);
+    Console.Write("\t" + team.Draws);
+    // ... print other stats as needed
+
+    Console.WriteLine(); // move to the next line
+}
+
+In this example, Team is a class representing a team with various statistics, and Position is a property of the Team class that stores the team's position in the standings. The code first initializes previousPosition to an invalid value, so that the first team will always have its position number printed. Then, it iterates through each team in the list and checks if its position number is the same as the previous team's position number. If it is, it prints a dash instead of the position number. Otherwise, it prints the position number and updates previousPosition. Finally, it prints the team's name and statistics, separated by tabs, and moves to the next line.
+
+Troels - Team does not contain "Position" can i check their place in the list instead? the list is sorted beforehand after Points -> GoalDiff -> GoalsFor -> GoalsAgainst -> Alphabetically 
+
+Chat - Sure! If the Team class does not have a Position property, you can use the index of the team in the list to determine its position. Here's an example implementation that uses the index instead:
+
+List<Team> teams = GetTeams().OrderByDescending(t => t.Points)
+                                .ThenByDescending(t => t.GoalDiff)
+                                .ThenByDescending(t => t.GoalsFor)
+                                .ThenBy(t => t.GoalsAgainst)
+                                .ThenBy(t => t.Name)
+                                .ToList();
+
+for (int i = 0; i < teams.Count; i++)
+{
+    Team team = teams[i];
+
+    if (i == 0 || team.Points != teams[i-1].Points || 
+        team.GoalDiff != teams[i-1].GoalDiff || team.GoalsFor != teams[i-1].GoalsFor)
+    {
+        Console.Write(i + 1); // print the position number
+    }
+    else
+    {
+        Console.Write("-"); // print a dash instead of the position number
+    }
+
+    Console.Write("\t" + team.Name); // print the team name
+    Console.Write("\t" + team.Wins); // print the team's wins (or any other stats you want to display)
+    Console.Write("\t" + team.Losses);
+    Console.Write("\t" + team.Draws);
+    // ... print other stats as needed
+
+    Console.WriteLine(); // move to the next line
+}
+
+In this example, the GetTeams() method returns a list of Team objects that have various statistics such as Points, GoalDiff, GoalsFor, and GoalsAgainst. The teams list is sorted according to the specified criteria using LINQ's OrderByDescending and ThenBy methods.
+
+In the loop, we iterate through each team in the list and check if its statistics (points, goal difference, and goals for) are different from the previous team's statistics. If they are, we print the team's position number (which is just the index in the list plus one). Otherwise, we print a dash instead of the position number. Finally, we print the team's name and statistics, separated by tabs, and move to the next line.
+
+### Hvor det er brugt
+Dette stykke kode er brugt i metoden "Printing()"
