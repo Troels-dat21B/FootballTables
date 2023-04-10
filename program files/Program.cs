@@ -28,7 +28,6 @@ class FileReader
                 Console.WriteLine(t.Abriviation + " | " + t.FullName + " | " + t.SpecialRanking);
                 found = true; //For ikke den skal blive ved med at skrive "Team not found"
                 break;
-                
             }
             if (string.Equals("all", team, StringComparison.OrdinalIgnoreCase))
             {
