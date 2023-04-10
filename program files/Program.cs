@@ -7,11 +7,11 @@ class FileReader
 {
     static void Main(string[] args)
     {
-        csvTeamReader();
+        //csvTeamReader();
         csvAllRoundsReader();
-        Round();
-        Table();
-        searchTeam();
+        //Round();
+        //Table();
+        //searchTeam();
 
 
     }
@@ -28,6 +28,7 @@ class FileReader
                 Console.WriteLine(t.Abriviation + " | " + t.FullName + " | " + t.SpecialRanking);
                 found = true; //For ikke den skal blive ved med at skrive "Team not found"
                 break;
+
             }
             if (string.Equals("all", team, StringComparison.OrdinalIgnoreCase))
             {
@@ -43,23 +44,62 @@ class FileReader
     public static List<Game> csvAllRoundsReader()
     {
         List<Game> allGameRounds = new List<Game>();
+        List<Game> cancelledGames = new List<Game>();
+        int roundNumber = 1;
+        int controlNumber = 0;
+
         try
         {
             foreach (string file in Directory.EnumerateFiles("./csv filer/Rounds", "*.csv"))
             {
+
+                string fileName = $"Cancelled round-{roundNumber}.csv";
                 using (StreamReader reader = new StreamReader(file))
                 {
                     while (!reader.EndOfStream)
                     {
+                        controlNumber++; //------ Hvis den står her, så incrementer den underligt
 
                         var line = reader.ReadLine();
                         string[] values = line.Split(',');
+                        //Console.WriteLine(line);
+                        if (values[2] == "CANCELLED")
+                        {
+                            cancelledGames.Add(new Game(values[0], values[1], true));
+                            Console.WriteLine("Cancelled games found: " + cancelledGames.Count);
+                            try
+                            {
+                                using (StreamWriter writer = new StreamWriter("./csv filer/CancelledGames/" + fileName, false))
+                                {
+                                    foreach (Game g in cancelledGames)
+                                    {
+                                        writer.WriteLine($"{g.HomeTeam},{g.AwayTeam},{g.IsCancelled}");
+                                    }
 
-                        Game tuple = new Game(values[0], values[1], int.Parse(values[2]), int.Parse(values[3]));
-                        allGameRounds.Add(tuple);
+                                }
+                            }
+                            catch (Exception e)
+                            {
+                                Console.WriteLine("CSV file not found.");
+                                Console.WriteLine(e.Message);
+                            }
+                        }
+                        else
+                        {
+                            Game tuple = new Game(values[0], values[1], int.Parse(values[2]), int.Parse(values[3]));
+                            allGameRounds.Add(tuple);
+                        }
+
 
                     }
                 }
+                //TODO Lortet virker ikke rigtigt
+                if (controlNumber % 6 == 0) //Tjekker om der er gået 6 kampe, hvis der er, så nulstiller den cancelledGames listen. 
+                {//Argumentativt hardcodet, men kunne ikke finde en anden måde at gøre det på. -Troels
+                    cancelledGames.Clear();
+                    roundNumber++;
+                }
+
             }
         }
         catch (Exception e)
@@ -67,9 +107,9 @@ class FileReader
             Console.WriteLine("CSV file not found.");
             Console.WriteLine(e.Message);
         }
-
         return allGameRounds;
     }
+
 
     public static List<Team> csvTeamReader()
     {
@@ -153,40 +193,54 @@ class FileReader
             {
                 if (t.Abriviation.ToLower() == g.AwayTeam.ToLower())
                 {
-                    if (g.HomeTeamGoals > g.AwayTeamGoals)
+
+                    if (g.AwayTeam.ToLower().Equals(g.HomeTeam.ToLower()))
                     {
-                        t.addMatch(g.HomeTeamGoals, g.AwayTeamGoals, false);
-                    }
-                    else if (g.HomeTeamGoals < g.AwayTeamGoals)
-                    {
-                        t.addMatch(g.HomeTeamGoals, g.AwayTeamGoals, true);
+                        Console.WriteLine("Match skipped. A team cannot play against itself.");
                     }
                     else
                     {
-                        t.addMatch(g.HomeTeamGoals, g.AwayTeamGoals);
+                        if (g.HomeTeamGoals > g.AwayTeamGoals)
+                        {
+                            t.addMatch(g.HomeTeamGoals, g.AwayTeamGoals, false);
+                        }
+                        else if (g.HomeTeamGoals < g.AwayTeamGoals)
+                        {
+                            t.addMatch(g.HomeTeamGoals, g.AwayTeamGoals, true);
+                        }
+                        else
+                        {
+                            t.addMatch(g.HomeTeamGoals, g.AwayTeamGoals);
+                        }
                     }
                 }
                 if (t.Abriviation.ToLower() == g.HomeTeam.ToLower())
                 {
-                    if (g.HomeTeamGoals > g.AwayTeamGoals)
+
+                    if (g.HomeTeam.ToLower().Equals(g.AwayTeam.ToLower()))
                     {
-                        t.addMatch(g.HomeTeamGoals, g.AwayTeamGoals, true);
-                    }
-                    else if (g.HomeTeamGoals < g.AwayTeamGoals)
-                    {
-                        t.addMatch(g.HomeTeamGoals, g.AwayTeamGoals, false);
+                        Console.WriteLine("Match skipped. A team cannot play against itself.");
                     }
                     else
                     {
-                        t.addMatch(g.HomeTeamGoals, g.AwayTeamGoals);
+                        if (g.HomeTeamGoals > g.AwayTeamGoals)
+                        {
+                            t.addMatch(g.HomeTeamGoals, g.AwayTeamGoals, true);
+                        }
+                        else if (g.HomeTeamGoals < g.AwayTeamGoals)
+                        {
+                            t.addMatch(g.HomeTeamGoals, g.AwayTeamGoals, false);
+                        }
+                        else
+                        {
+                            t.addMatch(g.HomeTeamGoals, g.AwayTeamGoals);
+                        }
                     }
                 }
-
             }
         }
+
         //--------------------------------------Sortering----------------------------------------------|
-
-
         var finalList = teams.OrderByDescending(x => x.Points)
         .ThenByDescending(x => x.GoalDifference)
         .ThenByDescending(x => x.GoalsFor)
@@ -194,7 +248,6 @@ class FileReader
         .ThenByDescending(x => x.Abriviation).ToList();
 
         printing(finalList);
-
     }
 
 
@@ -246,8 +299,4 @@ class FileReader
 
         }
     }
-
-
-
-
 }
