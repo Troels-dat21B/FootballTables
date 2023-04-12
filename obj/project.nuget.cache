@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "vhFrNZY4pvC0gJw5AsQDdpXKYOcU3tAbNQ9TNZDFBRRx7qRp2JaYCeUeoNdFTeFmoMmyAKW5oSmEwfx0ae7TDQ==",
+  "dgSpecHash": "MeIrg8UDM2ByXliK6BFeVJSz1pHKzA22UDzhglMbjz5d6EmNs4+hcxf4Me0Pb8sPrT8zbkxG7lrCfTg7UeDvuQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Troels\\Desktop\\C# Obligatorisk1\\FootballTables\\Football_tables.csproj",
+  "projectFilePath": "C:\\Users\\troel\\Skrivebord\\C# projects\\FootballTables\\FootballTables\\Football_tables.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Troels\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512"
+    "C:\\Users\\troel\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512"
   ],
   "logs": []
 }

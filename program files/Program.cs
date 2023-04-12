@@ -43,6 +43,7 @@ class FileReader
 
     public static List<Game> csvAllRoundsReader()
     {
+        List<Team> knownTeams = csvTeamReader();
         List<Game> allGameRounds = new List<Game>();
         List<Game> cancelledGames = new List<Game>();
         int roundNumber = 1;
@@ -63,34 +64,39 @@ class FileReader
                         var line = reader.ReadLine();
                         string[] values = line.Split(',');
                         //Console.WriteLine(line);
-                        if (values[2] == "CANCELLED")
-                        {
-                            cancelledGames.Add(new Game(values[0], values[1], true));
-                            Console.WriteLine("Cancelled games found: " + cancelledGames.Count);
-                            try
-                            {
-                                using (StreamWriter writer = new StreamWriter("./csv filer/CancelledGames/" + fileName, false))
-                                {
-                                    foreach (Game g in cancelledGames)
-                                    {
-                                        writer.WriteLine($"{g.HomeTeam},{g.AwayTeam},{g.IsCancelled}");
-                                    }
 
+                        for (int i = 0; i < knownTeams.Count; i++)
+                        {
+                            if (values[0].Equals(knownTeams[i].Abriviation) || values[1].Equals(knownTeams[i].Abriviation))
+                            {
+                                if (values[2] == "CANCELLED")
+                                {
+                                    cancelledGames.Add(new Game(values[0], values[1], true));
+                                    Console.WriteLine("Cancelled games found: " + cancelledGames.Count);
+                                    try
+                                    {
+                                        using (StreamWriter writer = new StreamWriter("./csv filer/CancelledGames/" + fileName, false))
+                                        {
+                                            foreach (Game g in cancelledGames)
+                                            {
+                                                writer.WriteLine($"{g.HomeTeam},{g.AwayTeam},{g.IsCancelled}");
+                                            }
+
+                                        }
+                                    }
+                                    catch (Exception e)
+                                    {
+                                        Console.WriteLine("CSV file not found.");
+                                        Console.WriteLine(e.Message);
+                                    }
+                                }
+                                else
+                                {
+                                    Game tuple = new Game(values[0], values[1], int.Parse(values[2]), int.Parse(values[3]));
+                                    allGameRounds.Add(tuple);
                                 }
                             }
-                            catch (Exception e)
-                            {
-                                Console.WriteLine("CSV file not found.");
-                                Console.WriteLine(e.Message);
-                            }
                         }
-                        else
-                        {
-                            Game tuple = new Game(values[0], values[1], int.Parse(values[2]), int.Parse(values[3]));
-                            allGameRounds.Add(tuple);
-                        }
-
-
                     }
                 }
                 //TODO Lortet virker ikke rigtigt
@@ -99,7 +105,6 @@ class FileReader
                     cancelledGames.Clear();
                     roundNumber++;
                 }
-
             }
         }
         catch (Exception e)
